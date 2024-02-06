@@ -4,18 +4,17 @@
     "description": "A command line SVG logo generator application.",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js",
-      "test": "jest"
+        "start": "node index.js",
+        "test": "jest"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "dependencies": {
-      "inquire": "^0.4.8",
-      "inquirer": "^8.2.4"
+        "inquire": "^0.4.8",
+        "inquirer": "^8.2.6"
     },
     "devDependencies": {
-      "jest": "^28.1.3"
+        "jest": "^28.1.3"
     }
-  }
-  
+}
