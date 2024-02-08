@@ -5,9 +5,20 @@ const fs = require('fs');
 inquirer
     .prompt([
         {
+            type: 'list',
+            name: 'shape',
+            message: 'Welcome to the logo maker. Please select a shape:',
+            choices: ['circle', 'triangle', 'square'],
+        },
+        {
+            type: 'input',
+            name: 'shapeColor',
+            message: 'Please enter a shape color by name or hexidecimal code:',
+        },
+        {
             type: 'input',
             name: 'textContent',
-            message: 'Please enter a company abbreviation of 1-3 characters:',
+            message: 'Please enter an abbreviation of 1-3 characters:',
             validate: async(input) => {
                 if(input.length > 3 || input.length < 1){
                     return 'Please enter 1-3 characters';
@@ -19,17 +30,6 @@ inquirer
             type: 'input',
             name: 'textColor',
             message: 'Please enter a text color by name or hexidecimal code:',
-        },
-        {
-            type: 'list',
-            name: 'shape',
-            message: 'Please select a shape:',
-            choices: ['circle', 'triangle', 'square'],
-        },
-        {
-            type: 'input',
-            name: 'shapeColor',
-            message: 'Please enter a shape color by name or hexidecimal code:',
         },
 ])
 .then((data) => {
