@@ -8,6 +8,12 @@ inquirer
             type: 'input',
             name: 'textContent',
             message: 'Please enter a company abbreviation of 1-3 characters:',
+            validate: async(input) => {
+                if(input.length > 3 || input.length < 1){
+                    return 'Please enter 1-3 characters';
+                }
+                return true;
+            }
         },
         {
             type: 'input',
